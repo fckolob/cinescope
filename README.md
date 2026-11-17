@@ -9,7 +9,7 @@ CineScope is a fully responsive film discovery web application built with vanill
 
 - **Live app:** https://mejaelek.github.io/cinescope/
 - **Source code:** https://github.com/mejaelek/cinescope
-- **Demo and code walkthrough video:** 
+- **Demo and code walkthrough video:**
 
 ## Software Purpose
 
@@ -18,13 +18,15 @@ I built CineScope to deepen my skills in developing and debugging HTML, CSS, and
 ## Features
 
 ### Pages
-| Page | What it does |
-| --- | --- |
-| `index.html` | Home / Discover: hero banner, trending films, genre filter, sort, film strip, load more, film facts |
-| `watchlist.html` | Personal watchlist: saved films, statistics, sorting, remove and clear controls |
-| `search.html` | Search: live debounced search, recent searches, full results grid |
+
+| Page             | What it does                                                                                        |
+| ---------------- | --------------------------------------------------------------------------------------------------- |
+| `index.html`     | Home / Discover: hero banner, trending films, genre filter, sort, film strip, load more, film facts |
+| `watchlist.html` | Personal watchlist: saved films, statistics, sorting, remove and clear controls                     |
+| `search.html`    | Search: live debounced search, recent searches, full results grid                                   |
 
 ### Highlights
+
 - **Two APIs working together:** TMDB for film data and OMDb for supplemental Rotten Tomatoes, Metacritic and IMDb ratings
 - **Parallel data fetching** with `async/await` and `Promise.all()`
 - **Film detail modal** showing cast, trailers, genres and merged ratings
@@ -46,6 +48,7 @@ I built CineScope to deepen my skills in developing and debugging HTML, CSS, and
 ## APIs
 
 **TMDB (The Movie Database)** — `https://api.themoviedb.org/3`
+
 - `/trending/movie/week`
 - `/movie/now_playing`
 - `/movie/{id}?append_to_response=credits,videos`
@@ -53,6 +56,7 @@ I built CineScope to deepen my skills in developing and debugging HTML, CSS, and
 - `/search/movie`
 
 **OMDb (Open Movie Database)** — `https://www.omdbapi.com`
+
 - Lookup by IMDb ID for Rotten Tomatoes, Metacritic and IMDb ratings
 
 ## Project Structure
@@ -124,6 +128,7 @@ cinescope/
 ## Acknowledgements
 
 Film data provided by [TMDB](https://www.themoviedb.org/) and [OMDb](https://www.omdbapi.com/). This product uses the TMDB API but is not endorsed or certified by TMDB.
+
 ## Team Favorite Quotes
 
 "Coming together is a beginning; keeping together is progress; working together is success." (Henry Ford), added by Kamohelo Godfrey Mejaele
@@ -131,3 +136,5 @@ Film data provided by [TMDB](https://www.themoviedb.org/) and [OMDb](https://www
 “I teach them correct principles and they govern themselves.” (Joseph Smith), added by Fernando Caballero.
 
 “It always seems impossible until it’s done.” (Nelson Mandela), added by Pius Mukisa.
+
+"Saruman believes it is only great power that can hold evil in check, but that is not what I have found. I found it is the small everyday deeds of ordinary folk that keep the darkness at bay… small acts of kindness and love." (Gandalf) added by Kyle Bowser
