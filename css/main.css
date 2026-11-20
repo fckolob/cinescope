@@ -387,8 +387,9 @@ select {
     line-height: 1.7;
     margin-bottom: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
 }
 
@@ -532,6 +533,42 @@ select {
 /* ── Section Headers ────────────────────────────────────── */
 .main-content {
     padding-top: var(--header-h);
+}
+
+/* ── Recommendations Section ────────────────────────────── */
+.recommendations-section {
+    padding: 48px 0 36px;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.recommendations-section[hidden],
+[hidden] {
+    display: none !important;
+}
+
+.recommendations-header {
+    margin-bottom: 24px;
+}
+
+.section-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: var(--clr-muted);
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+.section-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--clr-accent);
 }
 
 .section-header {
@@ -712,8 +749,9 @@ select {
     line-height: 1.3;
     margin-bottom: 6px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
 }
 

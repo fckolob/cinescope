@@ -117,6 +117,7 @@ export function buildCard(movie) {
     <article
       class="movie-card"
       data-id="${movie.id}"
+      data-genres="${(movie.genre_ids || []).join(',')}"
       data-title="${movie.title?.replace(/"/g, '&quot;')}"
       tabindex="0"
       role="button"
@@ -177,6 +178,7 @@ export function attachCardEvents(container) {
       const card = wlBtn.closest('.movie-card');
       const id = Number(wlBtn.dataset.id);
       // Minimal object needed for watchlist storage
+      const rawGenres = card.dataset.genres;
       const movie = {
         id,
         title: card.querySelector('.card-title').textContent,
@@ -184,7 +186,7 @@ export function attachCardEvents(container) {
           ? null
           : card.querySelector('img').src.split('/w342')[1],
         vote_average: parseFloat(card.querySelector('.card-rating').textContent),
-        genre_ids: [],
+        genre_ids: rawGenres ? rawGenres.split(',').filter(Boolean).map(Number) : [],
         release_date: card.querySelector('.card-meta span').textContent + '-01-01',
       };
       const added = toggleWatchlist(movie);
